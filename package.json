@@ -1,0 +1,32 @@
+{
+  "name": "@inevitable/tfjs-mnist",
+  "version": "1.0.0",
+  "description": "An implementation of the MNIST neural network for use in backend ML systems.",
+  "main": "mnist.js",
+  "scripts": {
+    "test": "node tester.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inevitable-team/tfjs-mnist.git"
+  },
+  "keywords": [
+    "tfjs",
+    "ai",
+    "ml",
+    "mnist",
+    "model",
+    "classifier"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inevitable-team/tfjs-mnist/issues"
+  },
+  "homepage": "https://github.com/inevitable-team/tfjs-mnist#readme",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "1.2.10",
+    "fs": "0.0.1-security",
+    "sharp": "^0.23.1"
+  }
+}
