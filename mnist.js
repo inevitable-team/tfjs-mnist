@@ -106,7 +106,7 @@ class mnist {
     }
 
     async trainModel() {
-        if (this.model != undefined & this.trainingImageTensorData != null) {
+        if (this.model != undefined && this.trainingImageTensorData != null) {
             let trainStart = new Date();
             this.trainingHistory = await this.model.fit(this.trainingImageTensorData.xs, this.trainingImageTensorData.ys, { batchSize: this.batchSize, epochs: this.epochs });
             this.trainTimeSecs = (new Date() - trainStart) / 1000;
@@ -127,8 +127,8 @@ class mnist {
                         this.confusionMatrix = matrix;
                         resolve(matrix);
                     });
-                } else { throw new Error(`No testing data in order to evaluate the model, try "evaluateFromImageFolder", "evaluateFromImageUrls" or "PredictOne"!`); resolve(null); }
-            } else { throw new Error("Model needs to be trained in order to evaluate it!"); resolve(null); }
+                } else { throw new Error(`No testing data in order to evaluate the model, try "evaluateFromImageFolder", "evaluateFromImageUrls" or "PredictOne"!`); }
+            } else { throw new Error("Model needs to be trained in order to evaluate it!"); }
         });
     }
 
